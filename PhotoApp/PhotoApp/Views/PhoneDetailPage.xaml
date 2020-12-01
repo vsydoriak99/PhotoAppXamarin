@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PhotoApp.Views.PhotoDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout  Spacing="20" Padding="15">
+        <Label Text="Text:" FontSize="Medium" />
+        <Label Text="{Binding Item.Id}" d:Text="Item name" FontSize="Small"/>
+        <Label Text="Description:" FontSize="Medium" />
+        <Label Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small"/>
+        <Label Text="Alt description:" FontSize="Medium" />
+        <Label Text="{Binding Item.Alt_description}" d:Text="Item description" FontSize="Small"/>
+        <Image Source="{Binding Item.MainImage}"/>
+        <RelativeLayout>
+        <Label Text="Likes" FontSize="Medium" />
+        <Label Text="{Binding Item.Likes}" FontSize="Medium" />
+        </RelativeLayout>
+     </StackLayout>
+    
+</ContentPage>
